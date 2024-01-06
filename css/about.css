@@ -11,63 +11,67 @@ body {
   background-color: #f0f0f0;
 }
 
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+/* NAVBAR */
 nav {
   background-color: #fff;
   width: 100%;
   padding: 10px 0;
-  /* box-shadow: 0px 0.1px 5px rgba(0, 0, 0, 0.5); */
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
 }
 
 nav .container {
-  max-width: 60%;
-  margin: auto;
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav .container .logo {
+nav .logo {
   font-size: 24px;
+  cursor: pointer;
 }
 
-nav .container ul {
+nav ul {
   display: flex;
   justify-content: space-between;
   gap: 1.7rem;
   text-decoration: none;
 }
 
-nav .container li {
+nav li {
   list-style: none;
 }
 
-nav .container li a {
+nav li a {
   text-decoration: none;
   color: #aaa;
   font-size: 14px;
   transition: 0.15s ease-in-out;
 }
 
-nav .container ul li .active {
+nav li a:hover {
+  color: #333;
+}
+
+nav li .active {
   color: #333;
   font-weight: 700;
 }
 
-nav .container a:hover {
-  color: #333;
-}
-
-.container {
-  max-width: 60%;
-  margin: 0 auto;
+/* Body of content */
+.contentContainer {
   padding: 30px 0;
   display: flex;
   justify-content: center;
   gap: 25px;
 }
 
+/* SIDEBAR */
 aside {
   background-color: #fff;
   display: flex;
@@ -90,10 +94,6 @@ aside .profile {
   flex-wrap: wrap;
   align-items: center;
   padding: 20px 0;
-}
-
-aside .profile::after {
-  border: #333 1px solid;
 }
 
 aside .profile img {
@@ -135,81 +135,49 @@ aside > p {
   margin-bottom: 20px;
 }
 
-main {
-  max-width: 75%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-article {
+.aboutContent {
   background-color: #fff;
   padding: 20px;
-  display: flex;
-  max-width: 100%;
-  justify-content: space-between;
   border-radius: 5px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
-article .imagepost {
-  max-width: 35%;
-  display: flex;
-  align-items: center;
-}
-
-article .contentPost {
-  padding-left: 7px;
-  max-width: 65%;
-}
-
-article .imagepost img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 3px;
-}
-
-article .contentPost h1 {
-  font-size: 24px;
+.aboutContent h1 {
+  font-size: 2.2rem;
   font-weight: 300;
+  color: #333;
+  padding-bottom: 1rem;
 }
 
-article .contentPost .infoPost {
-  margin: 5px 0 10px;
-}
-
-article .contentPost span {
-  color: #aaa;
+.aboutContent p {
   font-size: 14px;
-  text-decoration-line: underline;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.aboutContent h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.aboutContent button {
+  background-color: #888;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2px;
   cursor: pointer;
-  transition: 0.15s ease-in-out;
+  transition: 0.5s ease;
 }
 
-article .contentPost span:hover {
-  color: #333;
+.aboutContent button:hover {
+  background-color: #333;
 }
 
-article .contentPost .infoPost span {
-  font-size: 12px;
-  color: #aaa;
-  text-decoration-line: none;
-}
-
-article .contentPost p {
-  font-size: 14px;
-  display: inline;
-  color: #aaa;
-  line-height: 1.2rem;
-}
-
-.contentPost .infoPost .categories:hover {
-  color: #333;
-}
-
-@media (766px <= width <= 900px) {
-  aside .profile img {
-    width: 97px;
-  }
+.aboutContent button a {
+  text-decoration: none;
+  color: #fff;
 }
