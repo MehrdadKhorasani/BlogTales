@@ -1,0 +1,30 @@
+// Variebles
+
+$color-primary-light: #f0f0f0;
+$color-primary-dark: #333;
+$color-primary-white: #fff;
+$color-primary-light-2: #aaa;
+
+$container-width: 62.5%;
+
+$shadow: 0 1px 1rem rgba($color-primary-dark, 0.01);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: $color-primary-light;
+  font-weight: 300;
+  line-height: 1.6;
+}

@@ -1,0 +1,47 @@
+.nav {
+  background-color: $color-primary-white;
+  border-bottom: 2px solid rgba($color-primary-light-2, 0.2);
+  box-shadow: $shadow;
+
+  &__container {
+    width: $container-width;
+    margin: 0 auto;
+    padding: 1.8rem 0;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    color: $color-primary-dark;
+    font-size: 2.4rem;
+    font-weight: 400;
+    flex: 1;
+  }
+
+  &__links {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $color-primary-light-2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.3rem;
+  }
+
+  &__link {
+    list-style: none;
+    transition: all 0.3s;
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: $color-primary-dark;
+      }
+    }
+
+    &--active {
+      color: $color-primary-dark;
+    }
+  }
+}
