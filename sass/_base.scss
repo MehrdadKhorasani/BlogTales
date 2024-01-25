@@ -1,9 +1,9 @@
 // Variebles
-
-$color-primary-light: #f0f0f0;
-$color-primary-dark: #333;
 $color-primary-white: #fff;
+$color-primary-light: #f0f0f0;
 $color-primary-light-2: #aaa;
+$color-primary-light-3: #888;
+$color-primary-dark: #333;
 
 $container-width: 62.5%;
 
@@ -20,6 +20,14 @@ $shadow: 0 1px 1rem rgba($color-primary-dark, 0.01);
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -27,4 +35,13 @@ body {
   background-color: $color-primary-light;
   font-weight: 300;
   line-height: 1.6;
+}
+
+.container {
+  width: $container-width;
+  margin: 3rem auto;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
 }
