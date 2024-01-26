@@ -6,6 +6,8 @@
   border-radius: 7px;
   grid-column: 1 / 2;
   overflow: hidden;
+  align-self: flex-start;
+  box-shadow: $shadow;
 
   display: grid;
   grid-template-columns: 1fr;

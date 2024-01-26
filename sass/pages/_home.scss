@@ -1,6 +1,11 @@
 .layout__posts {
   grid-column: 2 / -1;
   height: 100px;
+
+  display: grid;
+  gap: 3rem;
+
+  height: 100%;
 }
 
 .layout__btn {
