@@ -173,8 +173,72 @@ body {
   color: #333;
 }
 
+.post {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.post__content-container {
+  display: flex;
+  flex-direction: column;
+}
+.post__img {
+  width: 19.6rem;
+  height: 18rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 3px;
+  margin-right: 2rem;
+}
+.post__h1 {
+  color: inherit;
+  font-size: 2.2rem;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 1.1;
+  transition: all 0.3s;
+}
+.post__h1:hover {
+  color: #888;
+}
+.post__info {
+  margin: 8px 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.post__info span {
+  color: #aaa;
+}
+.post__info-cat {
+  text-decoration: none;
+  color: #aaa;
+  transition: all 0.3s;
+}
+.post__info-cat:hover {
+  color: #333;
+}
+.post__content {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #aaa;
+}
+.post__content-paragraph {
+  display: inline;
+}
+.post__content-more {
+  color: currentColor;
+  transition: all 0.3s;
+}
+.post__content-more:hover {
+  color: #333;
+}
+
 .layout__posts {
-  background-color: palevioletred;
   grid-column: 2/-1;
   height: 100px;
 }
