@@ -1,0 +1,39 @@
+.layout__about {
+  grid-column: 2 / -1;
+  background-color: $color-primary-white;
+  color: $color-primary-dark;
+  border: 1px solid rgba($color-primary-light-2, 0.4);
+  padding: 2rem;
+  border-radius: 7px;
+  box-shadow: $shadow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  @media only screen and (max-width: $bp-medium) {
+    min-height: 50rem;
+  }
+}
+
+.about {
+  &__h2 {
+    font-size: 3.6rem;
+    font-weight: 400;
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+}

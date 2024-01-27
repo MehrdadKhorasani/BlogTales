@@ -5,6 +5,10 @@
   display: grid;
   gap: 3rem;
 
+  @media only screen and (max-width: $bp-large) {
+    gap: 2rem;
+  }
+
   height: 100%;
 }
 

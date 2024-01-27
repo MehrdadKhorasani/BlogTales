@@ -10,20 +10,40 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Lato", sans-serif;
   background-color: #f0f0f0;
   font-weight: 300;
   line-height: 1.6;
+  padding-bottom: 3rem;
 }
 
 .container {
-  width: 62.5%;
+  width: 96rem;
   margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 3rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .container {
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 53.12em) {
+  .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .nav {
@@ -32,11 +52,16 @@ body {
   box-shadow: 0 1px 1rem rgba(51, 51, 51, 0.05);
 }
 .nav__container {
-  width: 62.5%;
+  width: 96rem;
   margin: 0 auto;
   padding: 1.8rem 0;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 53.12em) {
+  .nav__container {
+    width: 80%;
+  }
 }
 .nav__logo {
   color: #333;
@@ -82,6 +107,11 @@ body {
   grid-template-rows: repeat(3, minmax(min-content, max-content));
   gap: 2rem;
 }
+@media only screen and (max-width: 53.12em) {
+  .layout__side {
+    order: 3;
+  }
+}
 
 .side__info {
   display: grid;
@@ -95,10 +125,23 @@ body {
   border-radius: 50%;
   margin: 0 auto 0;
 }
+@media only screen and (max-width: 53.12em) {
+  .side__info-img {
+    width: 24.6rem;
+    height: 24.6rem;
+    margin-bottom: 1rem;
+  }
+}
 .side__info-paragraph {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2rem;
+}
+@media only screen and (max-width: 53.12em) {
+  .side__info-paragraph {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
 }
 .side__info::after {
   content: "";
@@ -118,6 +161,11 @@ body {
   font-weight: 400;
   line-height: 2rem;
 }
+@media only screen and (max-width: 53.12em) {
+  .side__links {
+    font-size: 1.8rem;
+  }
+}
 .side__links-link {
   display: block;
   text-decoration: none;
@@ -134,6 +182,11 @@ body {
   height: 0.5px;
   background-color: rgba(170, 170, 170, 0.5);
 }
+@media only screen and (max-width: 53.12em) {
+  .side__links::after {
+    margin: 1rem 0;
+  }
+}
 
 .side__social {
   color: #aaa;
@@ -142,12 +195,24 @@ body {
   column-gap: 1.3rem;
   row-gap: 0.5rem;
 }
+@media only screen and (max-width: 53.12em) {
+  .side__social {
+    grid-template-columns: repeat(5, minmax(4rem, 100%));
+    row-gap: 3rem;
+  }
+}
 .side__social-logo {
   text-decoration: none;
 }
 .side__social-logo img {
   width: 2rem;
   height: 2rem;
+}
+@media only screen and (max-width: 53.12em) {
+  .side__social-logo img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .side__social-paragraph {
   grid-column: 1/-1;
@@ -156,6 +221,12 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+}
+@media only screen and (max-width: 53.12em) {
+  .side__social-paragraph {
+    justify-self: center;
+    font-size: 1.2rem;
+  }
 }
 .side__social-paragraph a {
   text-decoration: none;
@@ -169,12 +240,19 @@ body {
   background-color: #fff;
   color: #333;
   border: 1px solid rgba(170, 170, 170, 0.4);
-  width: 100%;
+  max-width: 100%;
   padding: 2rem;
   border-radius: 7px;
   box-shadow: 0 1px 1rem rgba(51, 51, 51, 0.05);
   display: grid;
   grid-template-columns: 1fr 3fr;
+}
+@media only screen and (max-width: 53.12em) {
+  .post {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 .post__content-container {
   display: flex;
@@ -188,6 +266,13 @@ body {
   border-radius: 3px;
   margin-right: 2rem;
 }
+@media only screen and (max-width: 53.12em) {
+  .post__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
 .post__h1 {
   color: inherit;
   font-size: 2.2rem;
@@ -199,11 +284,21 @@ body {
 .post__h1:hover {
   color: #888;
 }
+@media only screen and (max-width: 53.12em) {
+  .post__h1 {
+    font-size: 3.5rem;
+  }
+}
 .post__info {
   margin: 8px 0;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+@media only screen and (max-width: 53.12em) {
+  .post__info {
+    font-size: 1.4rem;
+  }
 }
 .post__info span {
   color: #aaa;
@@ -220,6 +315,11 @@ body {
   font-weight: 400;
   font-size: 1.4rem;
   color: #aaa;
+}
+@media only screen and (max-width: 53.12em) {
+  .post__content {
+    font-size: 1.8rem;
+  }
 }
 .post__content-paragraph {
   display: inline;
@@ -239,12 +339,55 @@ body {
   gap: 3rem;
   height: 100%;
 }
+@media only screen and (max-width: 62.5em) {
+  .layout__posts {
+    gap: 2rem;
+  }
+}
 
 .layout__btn {
   grid-column: 2/span 1;
 }
 
+.layout__about {
+  grid-column: 2/-1;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid rgba(170, 170, 170, 0.4);
+  padding: 2rem;
+  border-radius: 7px;
+  box-shadow: 0 1px 1rem rgba(51, 51, 51, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+@media only screen and (max-width: 53.12em) {
+  .layout__about {
+    min-height: 50rem;
+  }
+}
+
+.about__h2 {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+.about__paragraph {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+@media only screen and (max-width: 53.12em) {
+  .about__paragraph {
+    margin-bottom: 1rem;
+  }
+}
+.about__h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
 .btn, .btn:link, .btn:visited {
+  display: inline-block;
   background-color: #888;
   color: #fff;
   font-size: 1.6rem;
@@ -255,6 +398,11 @@ body {
   transition: all 0.2s;
   cursor: pointer;
   text-decoration: none;
+}
+@media only screen and (max-width: 53.12em) {
+  .btn, .btn:link, .btn:visited {
+    font-size: 2.4rem;
+  }
 }
 .btn:hover {
   background-color: #333;
