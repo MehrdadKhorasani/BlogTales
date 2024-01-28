@@ -39,6 +39,11 @@ body {
   padding-bottom: 3rem;
 }
 
+::selection {
+  color: $color-primary-white;
+  background: $color-primary-dark;
+}
+
 .container {
   width: $container-width;
   margin: 3rem auto;

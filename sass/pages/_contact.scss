@@ -1,0 +1,75 @@
+.contact {
+  background-color: $color-primary-white;
+  color: $color-primary-dark;
+  border: 1px solid rgba($color-primary-light-2, 0.4);
+  padding: 2rem;
+  border-radius: 7px;
+  box-shadow: $shadow;
+
+  &__h2 {
+    font-size: 3.6rem;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__form {
+    label {
+      font-size: 1.4rem;
+      font-weight: 700;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.8rem;
+      }
+    }
+    input,
+    textarea {
+      font-size: 1.4rem;
+      font-family: inherit;
+      font-weight: 400;
+      color: $color-primary-dark;
+      width: 100%;
+      padding: 1rem;
+      margin: 0.2rem 0 1.4rem 0;
+      border: 1px solid $color-primary-light;
+      border-radius: 3px;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.8rem;
+        padding: 1.4rem;
+        margin: 0.2rem 0 1.4rem 0;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid $color-primary-dark;
+      }
+
+      &::placeholder {
+        color: $color-primary-light-2;
+      }
+    }
+
+    &-message {
+      height: 10rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 15rem;
+      }
+    }
+  }
+}
