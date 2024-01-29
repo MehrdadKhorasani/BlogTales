@@ -1,0 +1,14 @@
+.all-post {
+  background-color: $color-primary-white;
+  color: $color-primary-dark;
+  border: 1px solid rgba($color-primary-light-2, 0.4);
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  box-shadow: $shadow;
+  align-self: flex-start;
+
+  &__h2 {
+    font-size: 3.6rem;
+    font-weight: 400;
+  }
+}
