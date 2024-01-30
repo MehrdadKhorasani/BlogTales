@@ -473,6 +473,85 @@ body {
   font-weight: 400;
 }
 
+.page__post {
+  grid-column: 2/-1;
+  display: grid;
+  gap: 3rem;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid rgba(170, 170, 170, 0.4);
+  border-radius: 7px;
+  box-shadow: 0 1px 1rem rgba(51, 51, 51, 0.05);
+  overflow: hidden;
+}
+.page__post-img {
+  width: 100%;
+  height: 29rem;
+  object-fit: cover;
+}
+.page__post-container {
+  padding: 0 2rem 2rem 2rem;
+}
+.page__post-h2 {
+  font-size: 3.6rem;
+  font-weight: 400;
+  margin-top: -1.6rem;
+  line-height: 1.1;
+}
+.page__post-h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+  line-height: 1.1;
+}
+.page__post-h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+.page__post-p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.page__post-link {
+  color: #24a7ff;
+}
+.page__post-ol, .page__post-ul {
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+}
+.page__post-li {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.page__post-info {
+  margin: 16px 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.page__post-info span {
+  color: #aaa;
+}
+.page__post-info-cat {
+  text-decoration: none;
+  color: #aaa;
+  transition: all 0.3s;
+}
+.page__post-info-cat:hover {
+  color: #333;
+}
+.page__post-info::after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 1px;
+  background-color: rgba(51, 51, 51, 0.3);
+  margin-top: 2rem;
+}
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   background-color: #888;
