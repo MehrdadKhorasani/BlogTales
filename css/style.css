@@ -96,7 +96,9 @@ body {
     top: 0;
     right: -100%;
     z-index: 100;
-    background-color: #333;
+    background-color: #fff;
+    border-left: 2px solid rgba(170, 170, 170, 0.2);
+    font-size: 1.8rem;
     transition: all 0.2s ease-in-out;
   }
 }
@@ -120,11 +122,6 @@ body {
   color: #333;
 }
 @media only screen and (max-width: 53.12em) {
-  .nav__link--active {
-    color: #aaa;
-  }
-}
-@media only screen and (max-width: 53.12em) {
   .nav__link {
     margin-top: 40px;
   }
@@ -143,9 +140,14 @@ body {
   right: 2rem;
   transform: translateY(-50%);
 }
+.nav__hamburger {
+  width: 2rem;
+  height: 2rem;
+}
 .nav__toggle-close {
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 10%;
+  font-size: 4rem;
 }
 .nav #checkbox {
   display: none;

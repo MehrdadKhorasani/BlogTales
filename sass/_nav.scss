@@ -44,7 +44,10 @@
       top: 0;
       right: -100%;
       z-index: 100;
-      background-color: $color-primary-dark;
+      background-color: $color-primary-white;
+      border-left: 2px solid rgba($color-primary-light-2, 0.2);
+      font-size: 1.8rem;
+
       transition: all 0.2s ease-in-out;
     }
   }
@@ -67,10 +70,6 @@
 
     &--active {
       color: $color-primary-dark;
-
-      @media only screen and (max-width: $bp-medium) {
-        color: $color-primary-light-2;
-      }
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -94,9 +93,15 @@
     transform: translateY(-50%);
   }
 
+  &__hamburger {
+    width: 2rem;
+    height: 2rem;
+  }
+
   &__toggle-close {
-    top: 2rem;
-    right: 2rem;
+    top: 1rem;
+    right: 10%;
+    font-size: 4rem;
   }
 
   #checkbox {
