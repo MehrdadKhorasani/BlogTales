@@ -61,6 +61,7 @@ body {
   width: 96rem;
   margin: 0 auto;
   padding: 1.8rem 0;
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -83,6 +84,22 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.3rem;
 }
+@media only screen and (max-width: 53.12em) {
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: #333;
+    transition: all 0.2s ease-in-out;
+  }
+}
 .nav__link {
   list-style: none;
   transition: all 0.3s;
@@ -94,8 +111,47 @@ body {
 .nav__link a:hover {
   color: #333;
 }
+@media only screen and (max-width: 53.12em) {
+  .nav__link a {
+    padding: 10px;
+  }
+}
 .nav__link--active {
   color: #333;
+}
+@media only screen and (max-width: 53.12em) {
+  .nav__link--active {
+    color: #aaa;
+  }
+}
+@media only screen and (max-width: 53.12em) {
+  .nav__link {
+    margin-top: 40px;
+  }
+}
+.nav__toggle-close, .nav__toggle-open {
+  position: absolute;
+  display: none;
+}
+@media only screen and (max-width: 53.12em) {
+  .nav__toggle-close, .nav__toggle-open {
+    display: block;
+  }
+}
+.nav__toggle-open {
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+.nav__toggle-close {
+  top: 2rem;
+  right: 2rem;
+}
+.nav #checkbox {
+  display: none;
+}
+.nav #checkbox:checked ~ .nav__links {
+  right: 0;
 }
 
 .side {

@@ -7,6 +7,7 @@
     width: $container-width;
     margin: 0 auto;
     padding: 1.8rem 0;
+    position: relative;
 
     display: flex;
     align-items: center;
@@ -31,6 +32,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: $color-primary-dark;
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   &__link {
@@ -43,10 +59,50 @@
       &:hover {
         color: $color-primary-dark;
       }
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 10px;
+      }
     }
 
     &--active {
       color: $color-primary-dark;
+
+      @media only screen and (max-width: $bp-medium) {
+        color: $color-primary-light-2;
+      }
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 40px;
+    }
+  }
+
+  &__toggle-close,
+  &__toggle-open {
+    position: absolute;
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+    }
+  }
+
+  &__toggle-open {
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+  }
+
+  &__toggle-close {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  #checkbox {
+    display: none;
+  }
+  #checkbox:checked ~ .nav__links {
+    right: 0;
   }
 }
