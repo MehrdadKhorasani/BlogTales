@@ -26,8 +26,13 @@ async function getData() {
       "beforeend",
       `
         <div class="post">
+          <img src=${post.img} alt="post picture">
           <h1>${post.title}</h1>
-          <p>${post.body}</p>
+          <div>
+          <a href="#">${post.date}</a>
+          <a href="#">${post.categories}</a>
+          </div>
+          <p>${post.body}...<span style="margin-left:8px;text-decoration:underline;cursor:pointer;">READ MORE</span></p>
         </div>
       `
     );
