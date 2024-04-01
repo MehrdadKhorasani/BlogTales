@@ -24,10 +24,9 @@ async function getData() {
   const res = await fetch(URL);
   const data = await res.json();
   data.forEach((post) => {
-    if (post.id > 3)
-      postsEL.insertAdjacentHTML(
-        "beforeend",
-        `
+    postsEL.insertAdjacentHTML(
+      "beforeend",
+      `
         <div class="post">
           <img src=${post.img} alt="post image" class="post__img" />
           <div class="post__content-container">
@@ -49,7 +48,7 @@ async function getData() {
         </div>
 
       `
-      );
+    );
   });
 }
 getData();

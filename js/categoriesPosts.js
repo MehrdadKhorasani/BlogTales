@@ -24,7 +24,7 @@ async function getData() {
   const res = await fetch(URL);
   const data = await res.json();
   data.forEach((post) => {
-    if (post.id > 3)
+    if (post.categories === "MUSIC")
       postsEL.insertAdjacentHTML(
         "beforeend",
         `
